@@ -1,32 +1,25 @@
 package com.example.myapplication.components
 
 import android.app.Activity
-import android.content.Context
-import android.content.pm.PackageManager
 import android.graphics.Color
 import android.view.View
 import android.widget.Toast
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.DisposableEffect
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.viewinterop.AndroidView
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import com.budiyev.android.codescanner.AutoFocusMode
 import com.budiyev.android.codescanner.CodeScanner
 import com.budiyev.android.codescanner.CodeScannerView
 import com.budiyev.android.codescanner.DecodeCallback
 import com.budiyev.android.codescanner.ErrorCallback
 import com.budiyev.android.codescanner.ScanMode
-import com.example.myapplication.MainActivity
-import com.example.myapplication.viewmodels.SharedViewModel
+import com.example.myapplication.viewmodels.ScannerViewModel
 
 @Composable
 fun ScannerView(
-    viewModel: SharedViewModel,
+    viewModel: ScannerViewModel,
     onScanResult : (String) -> Unit,
 ){
     val context = LocalContext.current

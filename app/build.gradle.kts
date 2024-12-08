@@ -50,6 +50,9 @@ android {
 }
 
 dependencies {
+    implementation(libs.google.code.scanner)
+    implementation(libs.play.service)
+
     implementation("com.github.yuriy-budiyev:code-scanner:2.3.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
